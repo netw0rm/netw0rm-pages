@@ -28,4 +28,4 @@ markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 permalink: pretty
-exclude: [vendor, node_modules, gulpfile.js, package.json, CNAME, LICENSE, README.md]
+exclude: [vendor, node_modules, gulpfile.js, package.json, LICENSE, README.md]
