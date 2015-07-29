@@ -1,5 +1,5 @@
 {
-  "name": "start",
+  "name": "netw0rm.github.com",
   "private": true,
   "version": "0.0.0",
   "description": "",
@@ -17,7 +17,7 @@
   "devDependencies": {
     "gulp": "^3.8.5",
     "gulp-sass": "^0.7.2",
-    "browser-sync": "^1.1.2",
+    "browser-sync": "^2.8.0",
     "gulp-autoprefixer": "0.0.7",
     "gulp-rename": "^1.2.0",
     "gulp-clean": "^0.3.1",

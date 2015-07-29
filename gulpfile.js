@@ -91,7 +91,7 @@ gulp.task('js', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('css/*.scss', ['sass']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_config.yml'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*', '_config.yml'], ['jekyll-rebuild']);
     gulp.watch('js/*.js', ['js']);
     // gulp.watch('images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
 });
