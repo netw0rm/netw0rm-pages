@@ -2,8 +2,8 @@
 'use strict';
 
 // Directory reference:
-//   css: css
-//   javascript: js
+//   css: vendor/css
+//   javascript: vendor/js
 
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
@@ -54,27 +54,28 @@ gulp.task('build', ['sass', 'js']);
  * Compile files from src into both _site/css (for live injecting) and css (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    gulp.src('css/**/*.scss')
+    gulp.src('vendor/css/**/*.scss')
         .pipe(sass({
             includePaths: ['scss'],
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(concat('main.css'))
         .pipe(minifyCSS())
         .pipe(rename('build.min.css'))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({stream:true}))
-//        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('css'));
 });
 
 gulp.task('js', function() {
-    gulp.src('js/**/*.js')
+    gulp.src('vendor/js/**/*.js')
         .pipe(concat('build.js'))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('_site/js'))
         .pipe(browserSync.reload({ stream: true }))
-//        .pipe(gulp.dest('js'));
+        .pipe(gulp.dest('js'));
 });
 
 // gulp.task('images', function() {
@@ -90,9 +91,9 @@ gulp.task('js', function() {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('css/*.scss', ['sass']);
+    gulp.watch('vendor/css/**/*.+(css|scss)', ['sass']);
     gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/**/*', '_config.yml'], ['jekyll-rebuild']);
-    gulp.watch('js/*.js', ['js']);
+    gulp.watch('vendor/js/**/*.js', ['js']);
     // gulp.watch('images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
 });
 
