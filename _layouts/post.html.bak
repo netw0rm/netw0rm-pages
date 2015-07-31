@@ -71,7 +71,7 @@ layout: default
 
       <div class="content-panel feedback">
         
-        访问<a href="http://weibo.com/{{ site.weibo_userid }}"><i class="fa fa-weibo"></i></a> 或在下方留言
+        访问<a href="http://www.twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i></a> 或在下方留言
       </div>
 
       {% if site.disqus_account %}

@@ -3,7 +3,7 @@
 
 // Directory reference:
 //   css: vendor/css
-//   javascript: vendor/js
+//   javascript: vendor/jsa
 
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
@@ -92,7 +92,7 @@ gulp.task('js', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('vendor/css/**/*.+(css|scss)', ['sass']);
-    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/**/*', '_config.yml'], ['jekyll-rebuild']);
+    gulp.watch(['*.+(html|yml|xml|json|js)', '_includes/*.html', '_layouts/*.html', '_posts/**/*.md'], ['jekyll-rebuild']);
     gulp.watch('vendor/js/**/*.js', ['js']);
     // gulp.watch('images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
 });

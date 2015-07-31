@@ -1,27 +1,28 @@
 # Site settings
-title: "Shawn"
+title: "Shawn的博客"
 email: qiusct@gmail.com
-description: "A dark blog theme for Jekyll."
+description: "Shawn's Blog."
 baseurl: ""
-url: "http://carte-noire.jacobtomlinson.co.uk/"
-title_description: "good."
+url: "http://netw0rm.github.com"
+title_description: ""
 title_image: "http://i3.tietuku.com/7303a784fde5d76at.jpg"
 #google_analytics: "UA-20365477-4"
-disqus_account: cartenoire
-github_repository: https://github.com/jacobtomlinson/carte-noire
+disqus_account: netw0rm
+duoshuo_account: 
+github_repository: https://github.com/netw0rm/netw0rm.github.com
 #addthis_id: ra-513c6fa83da6ec67
 post_limit: 5
 
 # Social usernames/URLs
 twitter_username: shawnliu3603
 github_username:  netw0rm
-linkedin_link: http://carte-noire.jacobtomlinson.co.uk/
-google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
-stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
+linkedin_link: 
+google_plus_link: 
+stackoverflow_link: 
 
 # Footer
-footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Shawn</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+footer_left: "Made by <a href=\"https://twitter.com/shawnliu3603\">Shawn</a> <i class=\"fa fa-twitter\"></i>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/netw0rm/netw0rm.github.com\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
 # Build settings
 markdown: redcarpet
