@@ -2,8 +2,8 @@
 'use strict';
 
 // Directory reference:
-//   css: vendor/css
-//   javascript: vendor/jsa
+//   css: assets/css
+//   javascript: assets/jsa
 
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
@@ -54,7 +54,7 @@ gulp.task('build', ['sass', 'js']);
  * Compile files from src into both _site/css (for live injecting) and css (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    gulp.src('vendor/css/**/*.scss')
+    gulp.src('assets/css/**/*.+(css|scss)')
         .pipe(sass({
             includePaths: ['scss'],
             onError: browserSync.notify
@@ -69,7 +69,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function() {
-    gulp.src('vendor/js/**/*.js')
+    gulp.src('assets/js/**/*.js')
         .pipe(concat('build.js'))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
@@ -91,9 +91,9 @@ gulp.task('js', function() {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('vendor/css/**/*.+(css|scss)', ['sass']);
+    gulp.watch('assets/css/**/*.+(css|scss)', ['sass']);
     gulp.watch(['*.+(html|yml|xml|json|js)', '_includes/*.html', '_layouts/*.html', '_posts/**/*.md'], ['jekyll-rebuild']);
-    gulp.watch('vendor/js/**/*.js', ['js']);
+    gulp.watch('assets/js/**/*.js', ['js']);
     // gulp.watch('images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
 });
 

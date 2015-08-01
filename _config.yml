@@ -14,6 +14,7 @@ github_repository: https://github.com/netw0rm/netw0rm.github.com
 post_limit: 5
 
 # Social usernames/URLs
+weibo_userid: idiy
 twitter_username: shawnliu3603
 github_username:  netw0rm
 linkedin_link: 
@@ -29,4 +30,4 @@ markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 permalink: pretty
-exclude: [vendor, node_modules, gulpfile.js, package.json, CNAME, LICENSE, README.md]
+exclude: [assets, node_modules, gulpfile.js, package.json, CNAME, LICENSE, README.md]
