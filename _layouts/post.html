@@ -83,6 +83,15 @@ layout: default
       </div>
       {% endif %}
 
+      {% if site.duoshuo_account %}
+      <div class="content-panel comments">
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-title="{{ page.title }}"></div>
+        <!-- 多说评论框 end -->
+      </div>
+      
+      {% endif %}
+
       <div class="content-panel related clearfix">
         {% for post in site.related_posts limit:1 %}
         <div class="related-header">
@@ -114,11 +123,8 @@ layout: default
           {% endif %}
         </div>
       </div>
-
     </div>
-
   </div>
-
 </div>
 
 {% if site.disqus_account %}
@@ -133,4 +139,19 @@ var disqus_shortname = "{{ site.disqus_account }}"; // required: replace example
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 </script>
+{% endif %}
+
+{% if site.duoshuo_account %}
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"{{ site.duoshuo_account }}"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- 多说公共JS代码 end -->
 {% endif %}
