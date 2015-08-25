@@ -6,7 +6,7 @@ baseurl: ""
 url: "http://netw0rm.github.com"
 title_description: ""
 title_image: "http://i3.tietuku.com/7303a784fde5d76at.jpg"
-#google_analytics: "UA-20365477-4"
+google_analytics: "UA-44795918-2"
 disqus_account: 
 duoshuo_account: netw0rm
 github_repository: https://github.com/netw0rm/netw0rm.github.com
